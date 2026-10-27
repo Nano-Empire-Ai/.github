@@ -47,7 +47,7 @@
 | **[`Nano-Empire-Ai/nano-empire-tollbooth`](https://github.com/Nano-Empire-Ai/nano-empire-tollbooth)** | Python decorator SDK for HTTP 402 machine paywalls and Base USDC metering | `pip install nano-empire-tollbooth` |
 | **[`Nano-Empire-Ai/nano-x402-client`](https://github.com/Nano-Empire-Ai/nano-x402-client)** | Client SDK for autonomous agents to negotiate and settle HTTP 402 challenges | `npm i @nanoempireai/nano-x402-client` |
 | **[`Nano-Empire-Ai/nano-empire-mcp-suite`](https://github.com/Nano-Empire-Ai/nano-empire-mcp-suite)** | Model Context Protocol (MCP) server suite with `x402` metering and trial onramps | [`/.well-known/mcp.json`](https://www.nanoempireai.com/.well-known/mcp.json) |
-| **[`roblambert9/recallguard-mcp`](https://github.com/roblambert9/recallguard-mcp)** | Smithery-certified (`Grade A`) MCP server for CPSC/FDA/Health Canada recall screening | `npx recallguard-mcp` |
+| **[`Nano-Empire-Ai/recallguard-mcp`](https://github.com/Nano-Empire-Ai/recallguard-mcp)** | Smithery-certified (`Grade A`) MCP server for CPSC/FDA/Health Canada recall screening | `npx recallguard-mcp` |
 | **[`roblambert9/bidshield-kernel`](https://github.com/roblambert9/bidshield-kernel)** | Open-source deterministic RFP/SOW & ERISA claim document-defense kernel (`v0.2`) | `python bidshield_kernel.py` |
 
 ---
