@@ -1,55 +1,77 @@
 # Nano Empire AI
 
-**Machine-payable recall intelligence (`RecallGuard`), deterministic procurement/appeal document defense (`BidShield`), and 5-stage MCP tool verification (`SkillProof`) for autonomous agents and engineering teams.**
+**Empirical Security Benchmarks, Deterministic Procurement Defense (`BidShield`), and Cryptographic Tool Verification (`SkillProof`) for the Autonomous Agent Economy.**
 
-![Status: Live Production](https://img.shields.io/badge/gateway-nanoempireai.com-10b981)
-![x402 Settlement: Base Mainnet USDC](https://img.shields.io/badge/x402-Base_Mainnet_USDC-3b82f6)
-![Self-Test Settlements: 1 ($0.05 USDC)](https://img.shields.io/badge/verified_settlements-1_self--test-6366f1)
-![Outside Paying Customers: 0](https://img.shields.io/badge/outside_paying_customers-0-f59e0b)
-
----
-
-## 1. The Four Agent Commerce Rails
-
-| Rail | Standard | Live Implementation |
-|------|----------|---------------------|
-| **1. Talk (Discovery & Coordination)** | Google `A2A v0.3.0` + Meta/Sierra `PAP/1.0` + Anthropic `MCP` | [`/.well-known/agent-card.json`](https://www.nanoempireai.com/.well-known/agent-card.json) · [`/.well-known/poppy.json`](https://www.nanoempireai.com/.well-known/poppy.json) · [`/.well-known/mcp.json`](https://www.nanoempireai.com/.well-known/mcp.json) |
-| **2. Mandate (Cryptographic Intent)** | EIP-3009 `TransferWithAuthorization` + SHA-256 Evidence Chains | Bounded per-call authorization on Base Mainnet (`eip155:8453`) with deterministic receipt verification |
-| **3. Checkout (Human & Enterprise)** | Stripe Live Checkout + `offers.json` (`v1.4.0`) | [`https://www.nanoempireai.com/offers.json`](https://www.nanoempireai.com/offers.json) (`$99` MCP Audit Pilot · `$99/$299` BidShield Triage · `$30/$99` RecallRadar) |
-| **4. Settlement (Machine-to-Machine)** | Linux Foundation / Coinbase `x402 v2` (`Base USDC`) | Instant HTTP 402 micropayments (`$0.05` / `$0.10` USDC) to `0x90E23A7b6F6494A879d05DDC4278D0e55Dec1e01` |
+[![Status: Live Production](https://img.shields.io/badge/gateway-nanoempireai.com-10b981)](https://www.nanoempireai.com)
+[![2026 MCP Benchmark](https://img.shields.io/badge/Benchmark-MSHB--2026-00b5e2)](https://www.nanoempireai.com/benchmarks/mcp-security)
+[![x402 Settlement: Base Mainnet USDC](https://img.shields.io/badge/x402-Base_Mainnet_USDC-3b82f6)](https://basescan.org/tx/0xf3919e8c55a4e7163cb10e88baa1d4b183d861ff379a54d0d001d932a6325999)
+[![SkillProof Gate](https://img.shields.io/badge/GitHub_Action-v1-a3ff00)](https://github.com/Nano-Empire-Ai/skillproof-action)
+[![Verified On-Chain Settlements](https://img.shields.io/badge/verified_settlements-1_self--test-6366f1)](https://basescan.org/block/51961194)
+[![Outside Paying Customers: 0](https://img.shields.io/badge/outside_paying_customers-0-f59e0b)](https://www.nanoempireai.com/status.json)
 
 ---
 
-## 2. Live Endpoints & Pricing
+## 🏆 The 2026 Model Context Protocol (MCP) Security Benchmark (MSHB-2026)
 
-| Endpoint / Surface | Protocol | Price | Status |
-|--------------------|----------|-------|--------|
-| [`GET https://recallguard-api.vercel.app/api/v1/health`](https://recallguard-api.vercel.app/api/v1/health) | REST / JSON | **Free** | **LIVE** (`46,642` CPSC/FDA/Health Canada recalls) |
-| `GET https://recallguard-api.vercel.app/api/v1/feed` | `x402` (`eip155:8453`) | **$0.05 USDC** (`50000` atomic) | **LIVE** (HTTP 402 challenge active) |
-| `POST https://recallguard-api.vercel.app/api/v1/match` | `x402` (`eip155:8453`) | **$0.10 USDC** (`100000` atomic) | **LIVE** (HTTP 402 challenge active) |
-| [`https://www.nanoempireai.com/grok-mcp/`](https://www.nanoempireai.com/grok-mcp/) | Stripe / Web | **$99** (3-Tool Pilot) | **LIVE** |
-| [`https://www.nanoempireai.com/bidshield/triage/index.html`](https://www.nanoempireai.com/bidshield/triage/index.html) | Stripe / Web | **$99** (Annex Gap Scan) | **LIVE** |
+Nano Empire maintains the definitive empirical security benchmark evaluating canonical Model Context Protocol servers against 6 deterministic execution sink vectors:
+1. **Shell / Subprocess Execution Sinks** (`subprocess.Popen`, `execSync`, `spawn`)
+2. **Dynamic Code Evaluation Hazards** (`eval()`, `new Function()`)
+3. **Filesystem Mutation Bounds** (unbounded directory writes & path traversal)
+4. **Credential & Secret Isolation** (`process.env` serialization leaks)
+5. **Network Egress Boundaries** (unpinned socket & HTTP egress)
+6. **Governance Hygiene** (`SECURITY.md`, deterministic lockfiles, OSI licenses)
+
+👉 **[View the Live Benchmark Leaderboard (25 Ranked Repos) →](https://www.nanoempireai.com/benchmarks/mcp-security)**
+
+### Add the SkillProof Security Gate to Your CI/CD
+Add this to `.github/workflows/skillproof.yml` in your repository:
+```yaml
+name: SkillProof Security Gate
+on: [push, pull_request]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run SkillProof Gate
+        uses: Nano-Empire-Ai/skillproof-action@v1
+        with:
+          min_score: 80
+          fail_on_critical: true
+```
 
 ---
 
-## 3. Verified On-Chain Settlement & Epistemic Ledger
+## ⚡ The Four Agent Commerce Rails
 
-- **Base Mainnet Block `51961194`:** [`0x0581b819b2e5b481cbbcfb8fe81e6fe57a0d0ef9c6f8fc04952164761586da64`](https://basescan.org/tx/0x0581b819b2e5b481cbbcfb8fe81e6fe57a0d0ef9c6f8fc04952164761586da64) (`0.05 USDC` settled via x402 for `GET /api/v1/feed`).
-- **Current Truth:** `1` verified on-chain self-test settlement (`$0.05 USDC`). `0` outside paying customers to date.
-
----
-
-## 4. Canonical Repositories
-
-| Repository | Role | Install / Access |
-|------------|------|------------------|
-| **[`Nano-Empire-Ai/nanoempire-web`](https://github.com/Nano-Empire-Ai/nanoempire-web)** | Sovereign gateway, `A2A`/`PAP`/`MCP` manifests, `BidShield` & `MCP Auditor` portals | [`nanoempireai.com`](https://www.nanoempireai.com) · [`llms.txt`](https://www.nanoempireai.com/llms.txt) |
-| **[`Nano-Empire-Ai/nano-empire-tollbooth`](https://github.com/Nano-Empire-Ai/nano-empire-tollbooth)** | Python decorator SDK for HTTP 402 machine paywalls and Base USDC metering | `pip install nano-empire-tollbooth` |
-| **[`Nano-Empire-Ai/nano-x402-client`](https://github.com/Nano-Empire-Ai/nano-x402-client)** | Client SDK for autonomous agents to negotiate and settle HTTP 402 challenges | `npm i @nanoempireai/nano-x402-client` |
-| **[`Nano-Empire-Ai/nano-empire-mcp-suite`](https://github.com/Nano-Empire-Ai/nano-empire-mcp-suite)** | Model Context Protocol (MCP) server suite with `x402` metering and trial onramps | [`/.well-known/mcp.json`](https://www.nanoempireai.com/.well-known/mcp.json) |
-| **[`Nano-Empire-Ai/recallguard-mcp`](https://github.com/Nano-Empire-Ai/recallguard-mcp)** | Smithery-certified (`Grade A`) MCP server for CPSC/FDA/Health Canada recall screening | `npx recallguard-mcp` |
-| **[`roblambert9/bidshield-kernel`](https://github.com/roblambert9/bidshield-kernel)** | Open-source deterministic RFP/SOW & ERISA claim document-defense kernel (`v0.2`) | `python bidshield_kernel.py` |
+| Rail | Protocol Standard | Live Production Implementation |
+|---|---|---|
+| **1. Discovery & Coordination** | Google `A2A v1.0` + Linux Foundation AAIF + Anthropic `MCP` | [`/.well-known/agent-card.json`](https://www.nanoempireai.com/.well-known/agent-card.json) · [`/agents.json`](https://www.nanoempireai.com/agents.json) · [`/llms.txt`](https://www.nanoempireai.com/llms.txt) |
+| **2. Cryptographic Gate** | SkillProof Ed25519 Trust Manifests + FIDO AP2 Spend Bounds | [`GET /api/skillproof/status`](https://www.nanoempireai.com/api/skillproof/status) · [`POST /api/bidshield/gate`](https://www.nanoempireai.com/api/bidshield/gate) |
+| **3. Machine Settlement** | Linux Foundation x402 v2 (`Base USDC`) | Streamable HTTP micropayments (`$0.05` / `$0.10` USDC) to `0x90E23A7b6F6494A879d05DDC4278D0e55Dec1e01` |
+| **4. Escrow & Enterprise** | Upwork Project Catalog + Stripe Live Checkout | [Upwork RFP Compliance Matrix ($149–$499 USD)](https://www.upwork.com/services/product/writing-translation-a-compliance-matrix-of-every-mandatory-requirement-in-your-government-rfp-2074328625924014322) |
 
 ---
 
-**Contact:** Robert Lambert (`rob@nanoempireai.com`) · **Machine Index:** [`https://www.nanoempireai.com/llms.txt`](https://www.nanoempireai.com/llms.txt)
+## 📦 Canonical Open Source Packages & Repositories
+
+| Repository | Role | Quick Install |
+|---|---|---|
+| **[`Nano-Empire-Ai/skillproof-action`](https://github.com/Nano-Empire-Ai/nanoempire-web/tree/main/packages/skillproof-action)** | 6-vector static security and governance gate for GitHub Actions | `uses: Nano-Empire-Ai/skillproof-action@v1` |
+| **[`Nano-Empire-Ai/recallguard-mcp`](https://github.com/roblambert9/recallguard-mcp)** | Smithery-listed MCP server for 46,642 US & Canadian product recalls | `npx recallguard-mcp` |
+| **[`Nano-Empire-Ai/nano-empire-tollbooth`](https://github.com/Nano-Empire-Ai/nano-empire-tollbooth)** | Python decorator SDK for HTTP 402 machine paywalls & Base USDC settlement | `pip install nano-empire-tollbooth` |
+| **[`roblambert9/bidshield-kernel`](https://github.com/roblambert9/bidshield-kernel)** | Deterministic RFP/SOW fatal disqualifier and deontic clause extractor | `python bidshield_kernel.py` |
+| **[`Nano-Empire-Ai/nanoempire-web`](https://github.com/Nano-Empire-Ai/nanoempire-web)** | Production gateway, benchmark leaderboard, and programmatic search hubs | [nanoempireai.com](https://www.nanoempireai.com) |
+
+---
+
+## 🔍 Verified On-Chain Ledger & Honest Status
+
+- **Base Mainnet Block `51961194`:** [`0xf3919e8c55a4e7163cb10e88baa1d4b183d861ff379a54d0d001d932a6325999`](https://basescan.org/tx/0xf3919e8c55a4e7163cb10e88baa1d4b183d861ff379a54d0d001d932a6325999) (`0.05 USDC` settled via x402 on 2026-09-29).
+- **Public Epistemic Ledger:** `1` verified on-chain self-test settlement. `0` outside paying customers to date.
+- **7-Day Automated Changelog:** [`https://www.nanoempireai.com/changelog.json`](https://www.nanoempireai.com/changelog.json)
+
+---
+
+**Executive Operations:** Hana Lambert (`hana@nanoempireai.com`) · **Founder:** Robert Lambert (`rob@nanoempireai.com`) · **Machine Context:** [`llms.txt`](https://www.nanoempireai.com/llms.txt)
